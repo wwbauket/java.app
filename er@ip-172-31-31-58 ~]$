@@ -1,0 +1,113 @@
+[33mcommit 7f1a5bf6ff2554d370d3b7f4efbfdc938b07a134[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: walter@gmail.com <ec2-user@ip-172-31-31-58.ec2.internal>
+Date:   Sun May 29 03:51:46 2022 +0000
+
+    first application version
+
+[1mdiff --git a/.bash_history b/.bash_history[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c6ba52a[m
+[1m--- /dev/null[m
+[1m+++ b/.bash_history[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32mls[m
+[32m+[m[32msudo yem install git[m
+[32m+[m[32msudo yum install git[m
+[32m+[m[32mclear[m
+[32m+[m[32mgit[m
+[32m+[m[32mls[m
+[32m+[m[32mll[m
+[32m+[m[32msudo yum install git[m
+[32m+[m[32mclear[m
+[32m+[m[32msudo yum install git[m[41m [m
+[32m+[m[32mgit[m
+[32m+[m[32mclear[m
+[32m+[m[32mgit[m
+[32m+[m[32mclear[m
+[32m+[m[32mls[m
+[32m+[m[32mmkdir tesla[m
+[32m+[m[32mcd tesla/[m
+[32m+[m[32mvi app.py[m
+[32m+[m[32mpython app.py[m
+[32m+[m[32msudo yum install python[m
+[32m+[m[32msudo yum install python39[m
+[32m+[m[32mclear[m
+[32m+[m[32mpython app.py[m
+[32m+[m[32msudo yum install python[m
+[32m+[m[32myes[m
+[1mdiff --git a/.bash_logout b/.bash_logout[m
+[1mnew file mode 100644[m
+[1mindex 0000000..af7c6fd[m
+[1m--- /dev/null[m
+[1m+++ b/.bash_logout[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m# ~/.bash_logout[m
+[32m+[m
+[1mdiff --git a/.bash_profile b/.bash_profile[m
+[1mnew file mode 100644[m
+[1mindex 0000000..55136b9[m
+[1m--- /dev/null[m
+[1m+++ b/.bash_profile[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m# .bash_profile[m
+[32m+[m
+[32m+[m[32m# Get the aliases and functions[m
+[32m+[m[32mif [ -f ~/.bashrc ]; then[m
+[32m+[m	[32m. ~/.bashrc[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32m# User specific environment and startup programs[m
+[1mdiff --git a/.bashrc b/.bashrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d81e0b5[m
+[1m--- /dev/null[m
+[1m+++ b/.bashrc[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32m# .bashrc[m
+[32m+[m
+[32m+[m[32m# Source global definitions[m
+[32m+[m[32mif [ -f /etc/bashrc ]; then[m
+[32m+[m	[32m. /etc/bashrc[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32m# User specific environment[m
+[32m+[m[32mif ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]][m
+[32m+[m[32mthen[m
+[32m+[m[32m    PATH="$HOME/.local/bin:$HOME/bin:$PATH"[m
+[32m+[m[32mfi[m
+[32m+[m[32mexport PATH[m
+[32m+[m
+[32m+[m[32m# Uncomment the following line if you don't like systemctl's auto-paging feature:[m
+[32m+[m[32m# export SYSTEMD_PAGER=[m
+[32m+[m
+[32m+[m[32m# User specific aliases and functions[m
+[1mdiff --git a/.gitconfig b/.gitconfig[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c5cd79c[m
+[1m--- /dev/null[m
+[1m+++ b/.gitconfig[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m[user][m
+[32m+[m	[32mname = walter[m
+[1mdiff --git a/.ssh/authorized_keys b/.ssh/authorized_keys[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fea1203[m
+[1m--- /dev/null[m
+[1m+++ b/.ssh/authorized_keys[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCelBuPDneBY2dqU34yC4mUdde6ai3vC8f9XKR8DE2DQIhoB7ERSImZwTw0GAFcRxHlPVgQH8Zm+U+KvS7XXlW3aOprRqCaTZY7Z3qzko7m0UKV+1Dp2PUQCXjlfISp87IQ5eSQG+xkAGDnzc2Zibskgi8ZlYNvSG9Rh5nFIEB87sCzH/tlrydtAEz6SQhv/l78OjuP7/ue13XGYZrvouo52IPuRa8W0GjO59tb5Cg6jJ/sZWvt+WoGfDXNjVfBMkstxzRfEDBWo/PJHt14c3MNgSY4UVSq8mXeGOaxKNHalRtxjzNGVdzFDvI5m6Bt6Qwgd8Qamd/jZCKEel9YrJ6F wwbauket24[m
+[1mdiff --git a/app.py b/app.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1124c3e[m
+[1m--- /dev/null[m
+[1m+++ b/app.py[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32mprint('simon')[m
+[32m+[m[32mprint('chidi')[m
+[1mdiff --git a/tesla/app.py b/tesla/app.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c50e174[m
+[1m--- /dev/null[m
+[1m+++ b/tesla/app.py[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mprint(simon)[m
